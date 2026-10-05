@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup environment",
+      "type": "process",
+      "command": "uv",
+      "args": ["sync"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "ruff", "check", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "Check formatting",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "ruff", "format", "--check", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "Type check",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "ty", "check", "src", "tests"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Tests",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "pytest"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run offline sample",
+      "type": "process",
+      "command": "uv",
+      "args": ["run", "python", "projects/example_agent/main.py"],
+      "problemMatcher": []
+    }
+  ]
+}

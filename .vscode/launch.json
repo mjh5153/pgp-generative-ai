@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug offline agent demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/projects/example_agent/main.py",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
